@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply font-inter text-[#424245];
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply m-0 p-0 box-border;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[12px] bg-transparent cursor-pointer;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-xl bg-primary cursor-pointer;
+  }
+}
+
+a.header-link {
+  @apply relative text-primary after:absolute after:content-[""] after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-[30px] after:h-[3px] after:bg-primary after:rounded-md !important;
+}
+
+@layer components {
+  .container {
+    @apply w-[90%] md:w-4/5 max-w-[80%] 2xl:w-[1500px] m-auto  overflow-hidden;
+  }
+
+  .routes {
+    @apply mt-[78px];
+  }
+
+  .toggler {
+    @apply w-[20px] bg-gray-400 h-[2px] mb-1 last:mb-0 transition ease-in-out duration-500;
+  }
+
+  .change .toggler:nth-child(1) {
+    transform: translate(1px, 6px) rotate(45deg);
+  }
+
+  .change .toggler:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .change .toggler:nth-child(3) {
+    transform: translate(0px, -6px) rotate(-45deg);
+  }
+
+  .title {
+    @apply font-bold text-2xl first-letter:capitalize;
+  }
+
+  .overlay {
+    @apply absolute top-0 left-0 w-full h-full bg-[rgba(34,34,34,0.5)] rounded-sm  invisible opacity-0 transition-opacity ease-in-out duration-500 flex justify-center items-center gap-2;
+  }
+  .product:hover > .overlay {
+    @apply visible opacity-100;
+  }
+
+  .btn {
+    @apply outline-none px-4 py-3 h-[44px] flex justify-center items-center gap-2 leading-5 text-white text-sm text-center font-semibold  transition-all ease-in-out duration-200 bg-priText rounded-xl hover:scale-95 cursor-pointer capitalize;
+  }
+
+  .icon {
+    @apply bg-white text-xl px-2 py-1 rounded-sm transition-all ease-in-out duration-200 hover:bg-priText hover:text-white hover:shadow-md hover:scale-95 cursor-pointer;
+  }
+
+  .edit {
+    @apply bg-red-100 border-red-400 text-red-600 hover:bg-red-300;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    @apply w-[8px] bg-transparent cursor-pointer;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    @apply rounded-xl bg-primary cursor-pointer;
+  }
+}
