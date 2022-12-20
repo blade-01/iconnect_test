@@ -21,7 +21,7 @@ Libraries and packages used:
 
 Useful Links:
 
-- [Live URL]()
+- [Live URL](https://iconnect-test.vercel.app/)
 
 ## Recommended IDE Setup
 
@@ -65,4 +65,5 @@ npm run build
 ```sh
 npm run lint
 ```
+
 # iconnect_test
